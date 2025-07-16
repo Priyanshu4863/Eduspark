@@ -5,26 +5,24 @@
   <title>About Us - EduSpark</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-.top-bar {
+.top-bar-centered {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 15px 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .logo {
-  height: 120px;
+  height: 160px; /* Or increase if needed */
   width: auto;
 }
 
 .tagline {
-  color: #FFFFFF; /* or use #C6FF00 for lime green */
+  color: #FFFFFF; /* or #C6FF00 for lime green */
   font-size: 18px;
   font-weight: bold;
+  margin-top: 8px;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -94,7 +92,7 @@
 
     .member h3 {
       margin: 0;
-      color: #FFD700;
+      color: #39FF14;
       font-size: 22px;
     }
 
@@ -107,9 +105,9 @@
   </style>
 </head>
 <body>
-<div class="top-bar">
+<div class="top-bar-centered">
   <img src="logo.png" alt="EduSpark Logo" class="logo">
-  <span class="tagline">Education is Power</span>
+  <div class="tagline">Education is Power</div>
 </div>
   <div class="container">
     <h1>About Us</h1>
