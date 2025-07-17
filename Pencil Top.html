@@ -204,17 +204,28 @@
       window.history.back();
     }
 
-    let voices = [];
     function populateVoices() {
-      voices = speechSynthesis.getVoices();
-      voiceSelect.innerHTML = "";
-      voices.forEach(voice => {
-        const option = document.createElement("option");
-        option.value = voice.name;
-        option.textContent = `${voice.name} (${voice.lang})`;
-        voiceSelect.appendChild(option);
-      });
+  voices = speechSynthesis.getVoices();
+  voiceSelect.innerHTML = "";
+
+  const allowedLangs = [
+    "hi-IN",   // Hindi
+    "en-IN",   // Indian English
+    "en-US",   // US English
+    "en-GB",   // UK English
+    "fr-FR",   // French
+    "es-ES"    // Spanish
+  ];
+
+  voices.forEach(voice => {
+    if (allowedLangs.includes(voice.lang)) {
+      const option = document.createElement("option");
+      option.value = voice.name;
+      option.textContent = `${voice.name} (${voice.lang})`;
+      voiceSelect.appendChild(option);
     }
+  });
+}
 
     window.speechSynthesis.onvoiceschanged = populateVoices;
 
@@ -254,3 +265,4 @@
   </script>
 </body>
 </html>
+    
