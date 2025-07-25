@@ -120,6 +120,29 @@
       box-shadow: 0 0 20px var(--button-glow), 0 0 40px var(--button-glow);
       transform: scale(1.05);
     }
+.about-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--button-border);
+  border-radius: 30px;
+  box-shadow: 0 0 12px var(--button-glow);
+  text-decoration: none;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: var(--button-text);
+  color: var(--button-bg);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--button-glow), 0 0 40px var(--button-glow);
+}
+
   </style>
 </head>
 <body>
@@ -149,6 +172,9 @@
     <a class="btn" href="social_studies.html">Social Studies</a>
     <a class="btn" href="Pencil Top.html">✏️ Pencil Top</a>
     <a class="btn" href="Voxly.html">🤖 Voxly - Your Personal Chatbot</a>
+    <a href="About Us.html" class="about-btn">ℹ️ About Us</a>
+
+    
   </div>
 
   <!-- Particle.js CDN -->
